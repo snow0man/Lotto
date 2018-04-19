@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (TextUtils.isEmpty(numStr)) numStr = Integer.toString(lastNo);
-            Toast.makeText(MainActivity.this, numStr + "회차 로또 정보를 가져왔습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, numStr + "회차의 로또 정보를 가져왔습니다.", Toast.LENGTH_SHORT).show();
 
             rvLotto.smoothScrollToPosition(Integer.parseInt(numStr) - 1);
 
@@ -108,9 +108,7 @@ public class MainActivity extends AppCompatActivity {
                     int no = Integer.parseInt(body.drwNo);
                     lottoInfoArray.put(no, body.toString());
                     lottoAdapter.notifyItemChanged(no);
-                    //lottoAdapter.retrieveLottoData(body.drwNo);
-                    //tvJsonData.setText(body.toString());
-                    //Toast.makeText(MainActivity.this, body.drwNo + "X1회차의 로또 정보를 가져왔습니다.", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, body.drwNo + "회차의 로또 정보를 가져왔습니다.", Toast.LENGTH_SHORT).show();
                 } else {
                     String err = "(unknown)";
 
